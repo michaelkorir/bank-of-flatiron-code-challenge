@@ -1,12 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import AccountContainer from './components/AccountContainer';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
+  function handleOnSearch(search, setTransactions) {
+    setTransactions((transactions) => {
+      transactions.filter((transaction) =>
+        transaction.description.includes(search)
+      );
+    });
+  }
 
-      </header>
+  return (
+    <div className='ui raised segment'>
+      <div className='ui segment violet inverted'>
+        <h2>The Royal Bank of Flatiron</h2>
+      </div>
+      <AccountContainer handleSearch={handleOnSearch} />
     </div>
   );
 }
