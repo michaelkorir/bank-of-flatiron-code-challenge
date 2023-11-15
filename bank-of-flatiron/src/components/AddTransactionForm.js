@@ -11,7 +11,7 @@ function AddTransactionForm() {
   function handleSubmit() {
     const newTransaction = { id, date, description, category, amount };
 
-    fetch('http://localhost:3000/transactions', {
+    fetch('https://my-json-server.typicode.com/michaelkorir/bank-of-flatiron-code-challenge/transactions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

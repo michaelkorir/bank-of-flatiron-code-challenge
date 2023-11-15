@@ -7,7 +7,7 @@ function AccountContainer() {
   const [transactions, setTransactions] = useState([]);
   const [searchQuery, setSearchQuery] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:3000/transactions')
+    fetch('https://my-json-server.typicode.com/michaelkorir/bank-of-flatiron-code-challenge/transactions')
       .then((response) => response.json())
       .then((data) => {
         setTransactions(data);
